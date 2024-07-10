@@ -1,0 +1,10 @@
+python3 -m venv MK
+source MK/bin/activate
+
+
+pip install django
+pip install djangorestframework
+pip install pygments
+
+
+cd ..
