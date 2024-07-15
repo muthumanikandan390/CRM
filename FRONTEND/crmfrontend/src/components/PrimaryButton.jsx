@@ -1,11 +1,16 @@
+import styles from "./PrimaryButton.module.css"
+import { Link } from 'react-router-dom';
+
 function PrimaryButton() {
+
   return (
-    <button>
+    <Link to="/homepage" >
+    <button className={styles.btn}>
 
     click me !
 
     </button>
-
+    </Link>
 
   )
 }

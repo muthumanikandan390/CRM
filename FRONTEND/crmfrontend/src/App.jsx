@@ -1,7 +1,8 @@
-import { useState } from 'react'
+
 import PrimaryButton from './components/PrimaryButton'
-import { BrowserRouter as Router, Route, Switch, BrowserRouter, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import "./index.css"
+import HomePage from './pages/HomePage';
 
 
 
@@ -13,7 +14,12 @@ function App() {
     <Router>
 
       <Routes>
-      <PrimaryButton />
+
+      <Route index element={<PrimaryButton />}/>
+      <Route path="homepage" element={<HomePage/>}/>
+      {/* <Route path="*" element={<PageNotFound />}/> */}
+
+
       </Routes>
 
     </Router>
