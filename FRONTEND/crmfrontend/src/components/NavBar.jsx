@@ -1,81 +1,20 @@
-import React from 'react';
-import {
-  Box,
-  Flex,
-  HStack,
-  Link,
-  IconButton,
-  Button,
-  useDisclosure,
-  Stack,
-} from '@chakra-ui/react';
-import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
+import styles from "../components/NavBar.module.css";
 
-const Links = ['Home', 'About', 'Services', 'Contact'];
-
-const NavLink = ({ children }) => (
-  <Link
-    px={2}
-    py={1}
-    rounded={'md'}
-    _hover={{
-      textDecoration: 'none',
-      bg: 'gray.200',
-    }}
-    href={'#'}>
-    {children}
-  </Link>
-);
-
-export default function NavBar() {
-  const { isOpen, onOpen, onClose } = useDisclosure();
-
+function NavBar() {
   return (
-    <>
-      <Box bg="gray.100" px={4}>
-        <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
-          <IconButton
-            size={'md'}
-            icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
-            aria-label={'Open Menu'}
-            display={{ md: 'none' }}
-            onClick={isOpen ? onClose : onOpen}
-          />
-          <HStack spacing={8} alignItems={'center'}>
-            <Box>Logo</Box>
-            <HStack
-              as={'nav'}
-              spacing={4}
-              display={{ base: 'none', md: 'flex' }}>
-              {Links.map((link) => (
-                <NavLink key={link}>{link}</NavLink>
-              ))}
-            </HStack>
-          </HStack>
-          <Flex alignItems={'center'}>
-            <Button
-              variant={'solid'}
-              colorScheme={'teal'}
-              size={'sm'}
-              mr={4}>
-              Sign Up
-            </Button>
-            <Button variant={'outline'} colorScheme={'teal'} size={'sm'}>
-              Log In
-            </Button>
-          </Flex>
-        </Flex>
+    <header>
+      <img className={styles.logo} src="images/logo.svg" alt="logo" />
+      <nav>
+        <ul className={styles.nav__links}>
+          <li><a href="#"> services </a></li>
+          <li><a href="#"> services </a></li>
+          <li><a href="#"> services </a></li>
+        </ul>
+      </nav>
+      <a className={styles.cta} href="#"><button className={styles.navbtn}>Contact</button></a>
 
-        {isOpen ? (
-          <Box pb={4} display={{ md: 'none' }}>
-            <Stack as={'nav'} spacing={4}>
-              {Links.map((link) => (
-                <NavLink key={link}>{link}</NavLink>
-              ))}
-            </Stack>
-          </Box>
-        ) : null}
-      </Box>
-    </>
+    </header>
   );
 }
+
+export default NavBar;
