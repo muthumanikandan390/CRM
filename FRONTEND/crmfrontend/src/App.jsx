@@ -3,6 +3,7 @@ import PrimaryButton from './components/PrimaryButton'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import "./index.css"
 import HomePage from './pages/HomePage';
+import { ChakraProvider } from '@chakra-ui/react'
 
 
 
@@ -10,7 +11,7 @@ function App() {
 
 
   return (
-
+<ChakraProvider>
     <Router>
 
       <Routes>
@@ -23,6 +24,7 @@ function App() {
       </Routes>
 
     </Router>
+    </ChakraProvider>
 
 
   )
