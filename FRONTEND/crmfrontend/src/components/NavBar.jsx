@@ -1,9 +1,15 @@
 import styles from "../components/NavBar.module.css";
 
+
 function NavBar() {
   return (
-    <header>
-      <img className={styles.logo} src="images/logo.svg" alt="logo" />
+    <header  className={styles.logoheader}>
+      <div className={styles.logo}>
+        <img  src="/images/logo3.png" alt="logo" />
+        <h1 className={styles.logoheading} >AstraCRM</h1>
+      </div>
+
+
       <nav>
         <ul className={styles.nav__links}>
           <li><a href="#"> services </a></li>
