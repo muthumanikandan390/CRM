@@ -8,6 +8,11 @@
 body {
   font-family: Arial, sans-serif;
 }
+.displaybtn {
+  background-color: navy;
+  border-radius: 50px;
+}
+
 
 /* Sidebar styles */
 .sideBar {

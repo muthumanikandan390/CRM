@@ -6,6 +6,7 @@ function HomePage() {
     <div>
 
       <NavBar />
+
       <SideBar />
 
     </div>
