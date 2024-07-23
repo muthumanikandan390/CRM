@@ -1,10 +1,11 @@
-import React from 'react';
+/* eslint-disable react/prop-types */
+
 import styles from "../components/SideBar.module.css";
 
 
-const Sidebar = () => {
+const Sidebar = ({isVisible}) => {
   return (
-    <div className={styles.sideBar}>
+    <div className={`${styles.sideBar} ${!isVisible ? styles.sidebarHidden : ''}` }>
       <ul className={styles.featuresList}>
         <li className={`${styles.featuresItem} ${styles.inbox} ${styles.active}`}>
           <i className={`bx bxs-inbox ${styles.featuresItemIcon} ${styles.inboxIcon}`}>

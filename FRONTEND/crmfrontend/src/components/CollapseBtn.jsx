@@ -1,9 +1,16 @@
+/* eslint-disable react/prop-types */
 import styles from "../components/NavBar.module.css";
-function CollapseBtn() {
+function CollapseBtn({ toggleSideBar }) {
+
+
+
+  function handleAlert() {
+    toggleSideBar()
+  }
+
   return (
 
-      <button className={styles.Collapsebtn}> hero </button>
-
+      <button onClick={handleAlert} className={styles.collapsebtn}> collapse btn </button>
 
   )
 }

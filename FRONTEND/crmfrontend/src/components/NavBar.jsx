@@ -1,12 +1,15 @@
+/* eslint-disable react/prop-types */
 import styles from "../components/NavBar.module.css";
+import CollapseBtn from "./CollapseBtn";
 
 
 
-function NavBar() {
+function NavBar({ toggleSideBar }) {
   return (
 
     <header  className={styles.logoheader}>
-      <button className={styles.collapsebtn}>hello</button>
+
+      <CollapseBtn toggleSideBar={toggleSideBar}/>
 
 
 
