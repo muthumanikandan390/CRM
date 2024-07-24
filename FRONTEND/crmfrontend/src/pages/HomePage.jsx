@@ -2,6 +2,7 @@ import { useState } from "react";
 import NavBar from "../components/NavBar";
 import SideBar from "../components/SideBar";
 import styles from './HomePage.module.css'; // Import your CSS module
+import Card from "../components/Card";
 
 function HomePage() {
   const [isVisible, setIsVisible] = useState(true);
@@ -17,8 +18,14 @@ function HomePage() {
       <div className={styles.container}>
         <SideBar isVisible={isVisible} />
         <div className={styles.content}>
-          <button>hi</button>
-          {/* Add more content here */}
+          <div className={styles.contentContainer}>
+            <div className={styles.leftContainer}>
+              <Card />
+              </div>
+            <div className={styles.rightContainer}>
+              <button>2nd container</button>
+              </div>
+          </div>
         </div>
       </div>
     </div>
