@@ -1,5 +1,6 @@
 
 import styles from './Card.module.css'; // Import the CSS module
+import ChildCard from './ChildCard';
 
 function Card() {
   return (
@@ -33,7 +34,9 @@ function Card() {
           </div>
         </div>
       </div>
+      <ChildCard />
     </div>
+
   );
 }
 

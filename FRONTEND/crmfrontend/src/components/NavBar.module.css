@@ -4,6 +4,8 @@
   background-color: #edf1f2;
   height: 80px;
   position: relative;
+
+  width: 100%;
 }
 
 .collapsebtn {
@@ -36,8 +38,16 @@ header {
   align-items: center;
   cursor: pointer;
   margin-right: auto;
+  margin-left:-140px;
   height: 55px;
   width: 55px;
+}
+
+.navs {
+
+display: flex;
+gap:400px;
+
 }
 
 

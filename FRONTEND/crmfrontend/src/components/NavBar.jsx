@@ -9,7 +9,7 @@ function NavBar({ toggleSideBar }) {
 
     <header  className={styles.logoheader}>
 
-      <CollapseBtn toggleSideBar={toggleSideBar}/>
+      {/* <CollapseBtn toggleSideBar={toggleSideBar}/> */}
 
 
 
@@ -20,7 +20,7 @@ function NavBar({ toggleSideBar }) {
       </div>
 
 
-      <nav>
+      <nav className={styles.navs} >
         <ul className={styles.nav__links}>
           <li><a href="#"> services </a></li>
           <li><a href="#"> services </a></li>

@@ -1,6 +1,7 @@
 .container {
   display: flex;
   transition: margin-left 0.3s ease; /* Smooth transition for content */
+  overflow-x:hidden
 }
 
 .sideBar {
@@ -40,7 +41,7 @@
 .leftContainer {
   flex: 0 0 40%;
 
-  background-color: red;
+  background-color: rgb(22, 124, 47);
   height: 100%;
 }
 .rightContainer {
