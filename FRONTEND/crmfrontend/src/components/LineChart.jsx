@@ -1,20 +1,5 @@
 
 
-const soldPerMonth = {
-  January: 30,
-  February: 50,
-  March: 80,
-  April: 45,
-  May: 60,
-  June: 75,
-  July: 90,
-  August: 55,
-  September: 70,
-  October: 85,
-  November: 95,
-  December: 100
-};
-
 
 
 import React, { PureComponent } from 'react';
@@ -42,14 +27,14 @@ export default class CustomLineChart extends PureComponent {
         <LineChart
           data={data}
           margin={{
-            top: 5,
-            right: 30,
-            left: 20,
-            bottom: 5,
+            top: 0,
+            right: 10,
+            left: -40,
+            bottom: 30,
           }}
         >
           <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="name" />
+          <XAxis dataKey="name" angle={-60} textAnchor="end" interval={0}/>
           <YAxis />
           <Tooltip />
           <Legend />
