@@ -2,7 +2,7 @@
 
 
 
-import React, { PureComponent } from 'react';
+import  { PureComponent } from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
 const data = [
@@ -30,7 +30,7 @@ export default class CustomLineChart extends PureComponent {
             top: 0,
             right: 10,
             left: -40,
-            bottom: 30,
+            bottom: 0,
           }}
         >
           <CartesianGrid strokeDasharray="3 3" />

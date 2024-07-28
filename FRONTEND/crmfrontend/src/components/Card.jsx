@@ -1,6 +1,9 @@
 
 import styles from './Card.module.css'; // Import the CSS module
 import ChildCard from './ChildCard';
+import CustomLineChart from './LineChart';
+import Example from './PieChart';
+
 
 function Card() {
   return (
@@ -34,7 +37,9 @@ function Card() {
           </div>
         </div>
       </div>
-      <ChildCard />
+      <ChildCard><CustomLineChart /></ChildCard>
+      <ChildCard><Example /></ChildCard>
+
     </div>
 
   );
