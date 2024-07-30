@@ -89,12 +89,12 @@
 // }
 
 
-import React, { PureComponent } from 'react';
+import { PureComponent } from 'react';
 import { PieChart, Pie, Sector, ResponsiveContainer } from 'recharts';
 
 const data = [
-  { name: 'Group A', value: 400 },
-  { name: 'Group B', value: 300 },
+  { name: 'MALE', value: 400 },
+  { name: 'FEMALE', value: 300 },
 
 ];
 

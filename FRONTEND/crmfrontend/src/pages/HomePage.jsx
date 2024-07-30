@@ -3,6 +3,8 @@ import NavBar from "../components/NavBar";
 import SideBar from "../components/SideBar";
 import styles from './HomePage.module.css'; // Import your CSS module
 import Card from "../components/Card";
+import ChildCard from "../components/ChildCard";
+import CustomChildCard from "../components/CustomChildCard";
 
 function HomePage() {
   const [isVisible, setIsVisible] = useState(true);
@@ -23,7 +25,14 @@ function HomePage() {
               <Card />
               </div>
             <div className={styles.rightContainer}>
-              <button>2nd container</button>
+
+              <div className={styles.rightContainer1}>
+              {/* <ChildCard /> */}
+              </div>
+              <div className={styles.rightContainer2}>
+              {/* <CustomChildCard /> */}
+              </div>
+
               </div>
           </div>
         </div>
