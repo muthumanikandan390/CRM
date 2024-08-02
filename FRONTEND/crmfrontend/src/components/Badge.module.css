@@ -1,0 +1,209 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+.sr-only {
+  visibility: hidden;
+}
+
+.hidden {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+  display: none;
+  overflow: hidden;
+}
+
+/* html {
+  font-size: 16px;
+} */
+
+
+.challengeTitle {
+  text-align: center;
+  padding: 0;
+  margin: 1rem 0 0.5rem;
+  color: #4d555f;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.challengeSubtitle {
+  text-align: center;
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: 400;
+  color: #b5bbc3;
+}
+
+.challengePartOf {
+  text-align: center;
+  margin: 1rem 0 0;
+  font-size: 0.875rem;
+  color: #b5bbc3;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+}
+.challengePartOf a,
+.challengePartOf a:visited {
+  color: #b5bbc3;
+  -webkit-text-decoration-style: wavy;
+  text-decoration-style: wavy;
+}
+.challengePartOf a:hover, .challengePartOf a:active,
+.challengePartOf a:visited:hover,
+.challengePartOf a:visited:active {
+  color: #d1d5da;
+}
+
+.container {
+  margin: 1.5rem;
+  padding: 2rem;
+  width: 1000px;
+  min-height: 300px;
+  border: 1px solid #d1d5da;
+  border-radius: 1rem;
+}
+
+.sbsTitle {
+  color: #c3c8cf;
+  text-transform: uppercase;
+  font-size: 0.625rem;
+  margin: 0 0 1rem;
+  padding: 1rem 0;
+}
+.sbsTitle:first-of-type {
+  padding-top: 0;
+  margin-top: 0;
+}
+
+hr {
+  border-top: 1px solid #edeff1;
+  margin: 3rem 0 2rem;
+}
+
+.badgeContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+.badgeContainer .badge {
+  margin: 0.25rem 0;
+}
+.badgeContainer .badge:not(:last-of-type) {
+  margin-right: 1rem;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.75rem 2.3rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  border: 1px solid transparent;
+}
+.badgeDefault {
+  background-color: #edeff1;
+  color: #4d555f;
+  border-color: #2b415c;
+}
+.badgePrimary {
+  background-color: #cdf0d7;
+  color: #2b9348;
+  border-color: #2b9348;
+}
+.badgeYellow {
+  background-color: #fef5d5;
+  color: #e8b906;
+  border-color: #e8b906;
+}
+.badgeOrange {
+  background-color: #fef0ea;
+  color: #f86624;
+  border-color: #f86624;
+}
+.badgeRed {
+  background-color: #fdeeef;
+  color: #ea3546;
+  border-color: #ea3546;
+}
+.badgePurple {
+  background-color: #e4d5f3;
+  color: #662e9b;
+  border-color: #662e9b;
+}
+.badgeBlue {
+  background-color: #e4f5f8;
+  color: #43bccd;
+  border-color: #43bccd;
+}
+.badgeRound {
+  border-radius: 1rem;
+}
+.badgeRound.badgeTagged::before {
+  left: 0.875rem;
+}
+.badgeTagged {
+  padding-left: 1.5rem;
+  position: relative;
+}
+.badgeTagged::before {
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
+  top: 50%;
+  left: 0.75rem;
+  transform: translate(-50%, -50%);
+}
+.badgeClosable {
+  padding-right: 1.5rem;
+  position: relative;
+}
+.badgeClosable .close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 1.5rem;
+  cursor: pointer;
+  opacity: 0.4;
+}
+.badgeClosable .close:hover {
+  opacity: 1;
+}
+.badgeAdd {
+  padding-left: 1.5rem;
+  position: relative;
+  color: #b5bbc3;
+  min-width: 75px;
+}
+.badgeAdd:hover, .badgeAdd:focus {
+  outline: 0;
+  border: 1px dotted #b5bbc3;
+  color: #4d555f;
+}
+.badgeAdd:focus::after {
+  display: none;
+}
+.badgeAdd::before {
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
+  top: 50%;
+  left: 0.75rem;
+  transform: translate(-50%, -50%);
+}
+.badgeAdd::after {
+  pointer-events: none;
+  content: attr(data-placeholder);
+  position: absolute;
+  top: 50%;
+  left: 1.5rem;
+  transform: translateY(-50%);
+}

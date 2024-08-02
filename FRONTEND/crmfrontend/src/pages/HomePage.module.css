@@ -42,7 +42,7 @@
 
 .leftContainer {
   flex: 0 0 40%;
-  background-color: rgb(22, 124, 47);
+
   height: 100%;
 }
 .rightContainer {
@@ -67,4 +67,47 @@
 
   margin-top: 51px;
 
+}
+
+
+.statusHeading {
+  background-color: red;
+  padding:10px 40px 10px 40px;
+  border-radius: 5px;
+
+}
+.statusContent {
+  background-color: rgb(0, 255, 247);
+  padding: 10px 80px;
+  border-radius: 5px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  gap: 0px; /* Define equal gap between items */
+  align-items: center; /* Center items horizontally */
+}
+
+.statusContent h1 {
+
+  color: rgb(0, 0, 0); /* Add color for better visibility */
+  font-size: 14px;
+  margin: 0; /* Remove default margin */
+}
+
+.badgeContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%; /* Make the container full width */
+
+}
+
+.badgeText {
+  flex: 1; /* Allow text to take available space */
+  padding: 10px 0px;
+
+}
+
+.badgeIcon {
+  margin-left: 20px; /* Optional: Add some space between text and badge */
 }
