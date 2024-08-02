@@ -3,10 +3,11 @@ import NavBar from "../components/NavBar";
 import SideBar from "../components/SideBar";
 import styles from './HomePage.module.css'; // Import your CSS module
 import Card from "../components/Card";
-import ChildCard from "../components/ChildCard";
+
 import CustomChildCard from "../components/CustomChildCard";
 import StatusCard from "../components/StatusCard";
 import Badge from "../components/Badge";
+import LiveServerCard from "../components/LIveServerCard.module";
 
 
 function HomePage() {
@@ -56,9 +57,18 @@ function HomePage() {
 
               </div>
               <div className={styles.rightContainer2}>
-              <CustomChildCard>
 
-              </CustomChildCard>
+              <LiveServerCard>
+
+                <div className={styles.liveContainer1}>
+
+                <h1 className={styles.liveHeading}>Live product Server  <div className={styles.redCircle}></div></h1>
+
+                <div className={styles.divider}></div>
+
+                </div>
+
+              </LiveServerCard>
               </div>
 
               </div>

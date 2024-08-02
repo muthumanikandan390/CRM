@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,500;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
 .container {
   display: flex;
   transition: margin-left 0.3s ease; /* Smooth transition for content */
@@ -74,6 +78,10 @@
   background-color: red;
   padding:10px 40px 10px 40px;
   border-radius: 5px;
+  font-family: "Lato", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+
 
 }
 .statusContent {
@@ -89,7 +97,7 @@
 
 .statusContent h1 {
 
-  color: rgb(0, 0, 0); /* Add color for better visibility */
+  color: rgb(71, 67, 67); /* Add color for better visibility */
   font-size: 14px;
   margin: 0; /* Remove default margin */
 }
@@ -105,9 +113,59 @@
 .badgeText {
   flex: 1; /* Allow text to take available space */
   padding: 10px 0px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+  font-size: 1.2rem;
+
+  /* font-style: normal; */
 
 }
 
 .badgeIcon {
   margin-left: 20px; /* Optional: Add some space between text and badge */
+}
+
+/* LiveServerCard */
+
+.liveHeading{
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 30px;
+  color: rgb(78, 74, 74);
+  position: relative;
+
+}
+.redCircle {
+  position: absolute; /* Position the circle absolutely within the heading */
+  width: 10px; /* Circle diameter */
+  height: 10px; /* Circle diameter */
+  background-color: red; /* Circle color */
+  border-radius: 50%; /* Make it a circle */
+  top: 60%; /* Position it vertically in the middle */
+  left: 50%; /* Position it horizontally in the middle */
+  transform: translate(-50%, -50%); /* Center the circle within the heading */
+  left:280px;
+}
+
+.liveContainer1 {
+
+
+
+
+
+
+}
+
+.divider {
+  width: 903px; /* Adjust the viewport width as needed */
+   /* Optional: Set a maximum width */
+  height: 2px; /* Thickness of the line */
+  background-color: rgba(0, 0, 0, 0.1); /* Color of the line */
+  margin: 10px auto 0 auto; /* Center the line and add spacing */
+}
+
+@media (max-width: 1470px) {
+  .divider {
+    width: 633px; /* Set width for screens with width up to 1401px */
+  }
 }
