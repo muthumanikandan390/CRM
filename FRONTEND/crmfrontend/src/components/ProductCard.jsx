@@ -8,8 +8,9 @@ function ProductCard() {
   return (
     <div className={styles.card}>
        <img src={imgs} alt={name} className={styles.image} />
+       <p className={styles.description}>Sony PlayStation®5 Console (slim)</p>
       <div className={styles.details}>
-        <span className={styles.name}>{name}</span>
+        <span className={styles.name}>{name} <em>20nos</em></span>
         <span className={styles.price}>{price}</span>
       </div>
     </div>
