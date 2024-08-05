@@ -148,11 +148,7 @@
 }
 
 .liveContainer1 {
-
-
-
-
-
+height: 20px;
 
 }
 
@@ -168,4 +164,18 @@
   .divider {
     width: 633px; /* Set width for screens with width up to 1401px */
   }
+}
+
+
+.liveContainer2 {
+
+
+  display: flex;
+  flex-direction: column; /* Or column, depending on layout */
+  width: 100%; /* Ensure the container has a defined width */
+  height:457px;
+  overflow: auto;
+
+
+
 }

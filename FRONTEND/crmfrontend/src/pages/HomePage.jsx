@@ -7,7 +7,8 @@ import Card from "../components/Card";
 import CustomChildCard from "../components/CustomChildCard";
 import StatusCard from "../components/StatusCard";
 import Badge from "../components/Badge";
-import LiveServerCard from "../components/LIveServerCard.module";
+import LiveServerCard from "../components/LiveServerCard.module";
+import ProductCard from "../components/ProductCard";
 
 
 function HomePage() {
@@ -67,6 +68,20 @@ function HomePage() {
                 <div className={styles.divider}></div>
 
                 </div>
+
+                <div className={styles.liveContainer2}>
+
+                  <ProductCard />
+                  <ProductCard />
+                  <ProductCard />
+                  <ProductCard />
+                  <ProductCard />
+                  <ProductCard />
+                  <ProductCard />
+
+                </div>
+
+
 
               </LiveServerCard>
               </div>

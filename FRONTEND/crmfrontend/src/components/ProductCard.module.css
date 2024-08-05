@@ -1,13 +1,14 @@
 .card {
-
   background-color: #ffffff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   padding: 20px;
   margin: 20px;
-  min-height: 601px; /* Adjust height as needed */
-  min-width: 300px; /* Adjust width as needed */
+  min-height: 50px; /* Adjust height as needed */
+  width: auto; /* Adjust width as needed */
   display: flex;
+  align-items: center;
+  justify-content:center;
   flex-wrap: wrap;
 
 
