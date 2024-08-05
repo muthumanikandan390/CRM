@@ -78,6 +78,9 @@ function HomePage() {
                   <ProductCard />
                   <ProductCard />
                   <ProductCard />
+                  <ProductCard />
+                  <ProductCard />
+                  <ProductCard />
 
                 </div>
 

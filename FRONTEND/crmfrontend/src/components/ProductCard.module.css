@@ -4,12 +4,33 @@
   border-radius: 8px;
   padding: 20px;
   margin: 20px;
-  min-height: 50px; /* Adjust height as needed */
+  min-height: 75px; /* Adjust height as needed */
   width: auto; /* Adjust width as needed */
   display: flex;
   align-items: center;
-  justify-content:center;
-  flex-wrap: wrap;
+  justify-content: space-between;
+}
 
 
+.image {
+  width: 41px; /* Adjust size as needed */
+  height: 41px; /* Adjust size as needed */
+  border-radius: 5%; /* Make it circular if the image is square */
+  margin-right: 20px;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.name {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.price {
+  font-size: 14px;
+  color: #888888;
 }
