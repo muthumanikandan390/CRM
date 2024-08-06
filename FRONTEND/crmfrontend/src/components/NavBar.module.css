@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600..900;1,600..900&display=swap');
 
 .logoheader {
-  background-color: #edf1f2;
+  background-color: #ffffff;
   height: 80px;
   position: relative;
-
   width:auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+
 }
 
 .collapsebtn {

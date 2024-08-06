@@ -46,12 +46,13 @@
 
 .leftContainer {
   flex: 0 0 40%;
+  background-color: #ececec;
 
   height: 100%;
 }
 .rightContainer {
   flex: 0 0 60%;
-  background-color: purple;
+  background-color: #ececec;
 
 
 
@@ -69,7 +70,7 @@
 
 .rightContainer2 {
 
-  margin-top: 51px;
+  margin-top: 79px;
 
 }
 
