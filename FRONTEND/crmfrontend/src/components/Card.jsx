@@ -4,11 +4,33 @@ import ChildCard from './ChildCard';
 import CustomLineChart from './LineChart';
 import Example from './PieChart';
 
+import {useQuery} from '@tanstack/react-query'
+
+import axios from 'axios';
+
+
 
 function Card() {
+
+
+
+
+
+  const {data , error} = useQuery({queryKey :['randomFacts'],
+                                   queryFn: async() => {
+                                    const res = await axios.get('http://127.0.0.1:8000/crmapp/');
+                                    return res.data;
+                                  } });
+  console.log(error)
+  console.log(data)
+
+
+
+
   return (
     <div id="root">
       <div className={styles.container}>
+
         <div className={styles.row}>
           <div className={`${styles.dashboardInfo} ${styles.colLg3} ${styles.colMd6}`}>
             <div className={styles.wrap}>

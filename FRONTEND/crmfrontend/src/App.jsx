@@ -4,13 +4,15 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import "./index.css"
 import HomePage from './pages/HomePage';
 import { ChakraProvider } from '@chakra-ui/react'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 
-
+const queryClient = new QueryClient()
 
 function App() {
 
 
   return (
+    <QueryClientProvider client={queryClient} >
 <ChakraProvider>
     <Router>
 
@@ -25,6 +27,7 @@ function App() {
 
     </Router>
     </ChakraProvider>
+    </QueryClientProvider>
 
 
   )
