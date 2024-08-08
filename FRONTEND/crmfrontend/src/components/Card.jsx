@@ -23,6 +23,10 @@ function Card() {
                                   } });
   console.log(error)
   console.log(data)
+  if (data) {
+    console.log('First portfolio balance:', data[0]?.portfolio_balance);
+  }
+
 
 
 
@@ -30,6 +34,7 @@ function Card() {
   return (
     <div id="root">
       <div className={styles.container}>
+
 
         <div className={styles.row}>
           <div className={`${styles.dashboardInfo} ${styles.colLg3} ${styles.colMd6}`}>
