@@ -5,6 +5,8 @@ from crmapp.serializers import CrmappSerializer
 from rest_framework import viewsets
 from rest_framework.response import Response
 from rest_framework.decorators import action
+from django.db.models import Sum
+from django.db.models import Avg
 
 # Create your views here.
 
@@ -26,6 +28,17 @@ class BalanceRentalModelViewSet(viewsets.ViewSet):
         specified_product = BalanceRentalModel.objects.get(pk=pk)
         serializer = CrmappSerializer(specified_product)
         return Response(serializer.data)
+
+    @action(detail=False, methods=['get'] , url_path='total-count' )
+    def total_count(self, request):
+         total_amount = BalanceRentalModel.objects.aggregate(total=Sum('portfolio_balance'))
+         return Response(total_amount)
+
+
+
+
+
+
 
 
 

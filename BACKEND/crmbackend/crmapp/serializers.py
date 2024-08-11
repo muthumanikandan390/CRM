@@ -7,4 +7,7 @@ class CrmappSerializer(serializers.ModelSerializer):
 
   class Meta:
     model = BalanceRentalModel
-    fields = "__all__"
+    fields = (
+            'portfolio_balance',
+            'rental_income'
+        )
