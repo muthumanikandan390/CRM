@@ -19,7 +19,7 @@ function Card() {
   const {data , error} = useQuery({queryKey :['randomFacts'],
                                    queryFn: async() => {
                                     // const res = await axios.get('http://127.0.0.1:8000/crmapp/');
-                                    const res = await axios.get('http://127.0.0.1:8000/crmapp/total-count/');
+                                    const res = await axios.get('http://127.0.0.1:8000/crmapp/total-portfolio-count/');
                                     return res.data;
                                   } });
 
@@ -29,6 +29,21 @@ function Card() {
 
 
 const dataz = data && data.total !== undefined ? JSON.stringify(data.total) : ""
+
+
+async function fetchUsers(){
+  const response = await axios.get('http://127.0.0.1:8000/crmapp/total-rental-count/')
+  return response.data
+}
+
+const rentalQuery = useQuery({ queryKey: ['users'], queryFn: fetchUsers })
+
+if (rentalQuery.isSuccess) {
+  console.log(rentalQuery.data.total); // Data is being fetched
+}
+
+
+
 
 
 
@@ -59,7 +74,7 @@ const dataz = data && data.total !== undefined ? JSON.stringify(data.total) : ""
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path>
                 </svg>
               </h4>
-              <span className={styles.count}>€500</span>
+              <span className={styles.count}>€ {rentalQuery.isSuccess && `${rentalQuery.data.total}`} </span>
 
             </div>
           </div>

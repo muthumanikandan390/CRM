@@ -24,4 +24,4 @@ class Choice(models.Model):
 
 class BalanceRentalModel(models.Model):
     portfolio_balance = models.IntegerField()
-    rental_income = models.ImageField()
+    rental_income = models.IntegerField()
