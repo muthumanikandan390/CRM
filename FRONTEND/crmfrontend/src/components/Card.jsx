@@ -3,6 +3,7 @@ import styles from './Card.module.css'; // Import the CSS module
 import ChildCard from './ChildCard';
 import CustomLineChart from './LineChart';
 import Example from './PieChart';
+import { useState , useEffect} from 'react';
 
 import {useQuery} from '@tanstack/react-query'
 
@@ -21,14 +22,18 @@ function Card() {
                                     // const res = await axios.get('http://127.0.0.1:8000/crmapp/');
                                     const res = await axios.get('http://127.0.0.1:8000/crmapp/total-portfolio-count/');
                                     return res.data;
-                                  } });
+                                  },
+
+                                   refetchInterval: 100000}
+
+                                  );
 
   if (data) {
     console.log('First portfolio balance:', data);
   }
 
 
-const dataz = data && data.total !== undefined ? JSON.stringify(data.total) : ""
+const dataz = data && data.total !== undefined ? JSON.stringify(data.total) : 0
 
 
 async function fetchUsers(){
@@ -42,6 +47,13 @@ if (rentalQuery.isSuccess) {
   console.log(rentalQuery.data.total); // Data is being fetched
 }
 
+const [ portfolio , setPortfolio] = useState(0);
+
+useEffect(() => {
+
+    setPortfolio(dataz);
+
+}, [dataz]);
 
 
 
@@ -62,7 +74,7 @@ if (rentalQuery.isSuccess) {
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path>
                 </svg>
               </h4>
-              <span className={styles.count}>€{dataz}</span>
+              <span className={styles.count}>€{portfolio}</span>
             </div>
           </div>
           <div className={`${styles.dashboardInfo} ${styles.colLg3} ${styles.colMd6}`}>

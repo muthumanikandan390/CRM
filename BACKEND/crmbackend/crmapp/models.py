@@ -25,3 +25,5 @@ class Choice(models.Model):
 class BalanceRentalModel(models.Model):
     portfolio_balance = models.IntegerField()
     rental_income = models.IntegerField()
+    def __str__(self):
+         return f"{self.id} - Balance & Rent"
