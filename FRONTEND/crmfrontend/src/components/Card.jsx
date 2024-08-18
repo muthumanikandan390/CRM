@@ -14,9 +14,6 @@ import axios from 'axios';
 function Card() {
 
 
-
-
-
   const {data , error} = useQuery({queryKey :['randomFacts'],
                                    queryFn: async() => {
                                     // const res = await axios.get('http://127.0.0.1:8000/crmapp/');
@@ -41,19 +38,37 @@ async function fetchUsers(){
   return response.data
 }
 
-const rentalQuery = useQuery({ queryKey: ['users'], queryFn: fetchUsers })
+const rentalQuery = useQuery({ queryKey: ['users'],
+                               queryFn: fetchUsers,
+                               refetchInterval: 1000000 })
 
 if (rentalQuery.isSuccess) {
-  console.log(rentalQuery.data.total); // Data is being fetched
+  console.log(rentalQuery.data.total);
 }
 
+
+//portfolio state and effect
 const [ portfolio , setPortfolio] = useState(0);
 
 useEffect(() => {
 
     setPortfolio(dataz);
+    console.log(dataz)
 
 }, [dataz]);
+
+
+
+//rental state and effect
+const rentalData = rentalQuery.isSuccess === true ? rentalQuery.data.total : 0 ;
+
+const [rental , setRental] = useState(0)
+
+useEffect(() => {
+
+  setRental(rentalData)
+
+}, [rentalData]);
 
 
 
@@ -86,7 +101,7 @@ useEffect(() => {
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path>
                 </svg>
               </h4>
-              <span className={styles.count}>€ {rentalQuery.isSuccess && `${rentalQuery.data.total}`} </span>
+              <span className={styles.count}>€ {rental} </span>
 
             </div>
           </div>
