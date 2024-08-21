@@ -1,6 +1,7 @@
+/* eslint-disable react/prop-types */
 import styles from './Badge.module.css';
 
-function Badge() {
+function Badge({ className , orderStatus}) {
 
   return (
 
@@ -10,7 +11,10 @@ function Badge() {
 
 
         <div>
-          <span className={`${styles.badge} ${styles.badgeDefault}`}>Badge</span>
+          <span className={`${styles.badge} ${className}`}>{orderStatus}</span>
+
+
+
           {/* <span className={`${styles.badge} ${styles.badgePrimary}`}>Badge</span>
           <span className={`${styles.badge} ${styles.badgeYellow}`}>Badge</span>
           <span className={`${styles.badge} ${styles.badgeOrange}`}>Badge</span>

@@ -141,7 +141,7 @@
   position: absolute; /* Position the circle absolutely within the heading */
   width: 10px; /* Circle diameter */
   height: 10px; /* Circle diameter */
-  background-color: red; /* Circle color */
+  background-color: #56F000; /* Circle color */
   border-radius: 50%; /* Make it a circle */
   top: 60%; /* Position it vertically in the middle */
   left: 50%; /* Position it horizontally in the middle */
@@ -177,4 +177,23 @@ height: 20px;
   height:457px;
   overflow: auto;
 
+}
+
+
+.badgePrimary {
+  background-color: #cdf0d7;
+  color: #2b9348;
+  border-color: #2b9348;
+}
+
+.badgeRed {
+  background-color: #fdeeef;
+  color: #ea3546;
+  border-color: #ea3546;
+}
+
+.badgeYellow {
+  background-color: #fef5d5;
+  color: #e8b906;
+  border-color: #e8b906;
 }
