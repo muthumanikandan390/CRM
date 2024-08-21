@@ -22,12 +22,16 @@ function NavBar() {
 
       <nav className={styles.navs} >
         <ul className={styles.nav__links}>
-          <li><a href="#"> services </a></li>
-          <li><a href="#"> services </a></li>
-          <li><a href="#"> services </a></li>
+        <li>
+  <a href="https://github.com/muthumanikandan390/CRM">
+    <img className={styles.navicon} src="/images/github.png" alt="Logo"/>
+  </a>
+</li>
+          {/* <li><a href="#"> services </a></li>
+          <li><a href="#"> services </a></li> */}
         </ul>
       </nav>
-      <a className={styles.cta} href="#"><button className={styles.navbtn}>Contact</button></a>
+      <a className={styles.cta} href="http://127.0.0.1:8000/admin"><button className={styles.navbtn}>Database panel</button></a>
 
     </header>
   );

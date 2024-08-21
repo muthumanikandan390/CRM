@@ -79,8 +79,9 @@ gap:400px;
 
 .navbtn {
   padding: 9px 25px;
+  color:rgb(31, 31, 31);
   margin-left: 20px;
-  background-color: rgb(43, 174, 131, 1);
+  background-color: rgb(29, 223, 158);
   border: none;
   border-radius: 50px;
   cursor: pointer;
@@ -88,5 +89,18 @@ gap:400px;
 }
 
 .navbtn:hover {
-  background-color: rgb(43, 174, 131, 0.8);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.23);
+}
+
+
+.navicon {
+  height:30px;
+  width:30px;
+  opacity: .6;
+
+}
+
+.navicon:hover{
+  transition: 0.35s;
+  opacity: 1;
 }
